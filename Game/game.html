@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Game</title>
+    <style>
+        #gameCanvas {
+            background: #000;
+            border-radius: 8px;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Player
+        const player = {
+            x: canvas.width/2,
+            y: canvas.height-30,
+            width: 50,
+            height: 50,
+            color: '#00ff00',
+            speed: 5
+        };
+
+        // Game objects
+        let obstacles = [];
+        let score = 0;
+
+        // Controls
+        let rightPressed = false;
+        let leftPressed = false;
+
+        // Event listeners
+        document.addEventListener('keydown', keyDownHandler);
+        document.addEventListener('keyup', keyUpHandler);
+
+        function keyDownHandler(e) {
+            if(e.key === 'Right' || e.key === 'ArrowRight') rightPressed = true;
+            if(e.key === 'Left' || e.key === 'ArrowLeft') leftPressed = true;
+        }
+
+        function keyUpHandler(e) {
+            if(e.key === 'Right' || e.key === 'ArrowRight') rightPressed = false;
+            if(e.key === 'Left' || e.key === 'ArrowLeft') leftPressed = false;
+        }
+
+        // Create obstacle
+        function createObstacle() {
+            obstacles.push({
+                x: Math.random() * (canvas.width - 20),
+                y: 0,
+                width: 20,
+                height: 20,
+                color: '#ff0000',
+                speed: 3
+            });
+        }
+
+        // Game loop
+        function gameLoop() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Move player
+            if(rightPressed && player.x < canvas.width - player.width) {
+                player.x += player.speed;
+            }
+            if(leftPressed && player.x > 0) {
+                player.x -= player.speed;
+            }
+
+            // Draw player
+            ctx.fillStyle = player.color;
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+
+            // Create obstacles randomly
+            if(Math.random() < 0.02) {
+                createObstacle();
+            }
+
+            // Update and draw obstacles
+            for(let i = obstacles.length - 1; i >= 0; i--) {
+                let obstacle = obstacles[i];
+                obstacle.y += obstacle.speed;
+                
+                // Remove obstacles that are off screen
+                if(obstacle.y > canvas.height) {
+                    obstacles.splice(i, 1);
+                    score++;
+                    continue;
+                }
+
+                // Check collision
+                if(obstacle.x < player.x + player.width &&
+                   obstacle.x + obstacle.width > player.x &&
+                   obstacle.y < player.y + player.height &&
+                   obstacle.y + obstacle.height > player.y) {
+                    // Game Over
+                    alert('Game Over! Score: ' + score);
+                    obstacles = [];
+                    score = 0;
+                }
+
+                // Draw obstacle
+                ctx.fillStyle = obstacle.color;
+                ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+            }
+
+            // Draw score
+            ctx.fillStyle = '#fff';
+            ctx.font = '20px Arial';
+            ctx.fillText('Score: ' + score, 10, 30);
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Start game
+        gameLoop();
+    </script>
+</body>
+</html>

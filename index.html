@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smithy Menjensen - Senior Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="Pictures/avatar.png" alt="Avatar" class="nav-avatar">
+        </div>
+        
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="home-text">
+                <p class="greeting"> Hello, I'm</p>
+                <h1 class="name">Smithy Menjensen</h1>
+                <h2 class="title">Senior Full-Stack Developer</h2>
+                <p class="description">
+                    I craft elegant, user-centric web solutions with cutting-edge technologies. 
+                    Specialized in building scalable applications and creating seamless user experiences.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="home-image">
+                <img src="Pictures/profile.png" alt="Smithy Menjensen" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>As a Senior Full-Stack Developer with over 8 years of experience, I specialize in building scalable web applications and leading development teams to success. My expertise spans both front-end and back-end technologies, with a particular focus on creating seamless user experiences.</p>
+                </div>
+                <div class="skills">
+                    <h3>Technical Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">GraphQL</span>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h3>What I Do</h3>
+                    <ul class="experience-list">
+                        <li>✦ Architect and develop full-stack web applications</li>
+                        <li>✦ Lead development teams and mentor junior developers</li>
+                        <li>✦ Optimize application performance and scalability</li>
+                        <li>✦ Implement secure authentication and data protection</li>
+                        <li>✦ Design and maintain RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="achievements">
+                    <h3>Achievements</h3>
+                    <ul class="achievement-list">
+                        <li>🏆 Led development of 10+ successful enterprise projects</li>
+                        <li>🚀 Reduced application load time by 60%</li>
+                        <li>👥 Mentored 15+ junior developers to senior positions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects-content">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="unity-game-container">
+                <h3 class="unity-game-title">FPS Game Project</h3>
+                <div class="unity-game-frame">
+                    <iframe src="Game/index.html" frameborder="0" allowfullscreen allow="autoplay; fullscreen; pointer-lock"></iframe>
+                </div>
+                <div class="game-controls">
+                    <p>Controls: Navigate crosshair using your mouse, click to shoot</p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Pictures/project1.jpg" alt="AI Analytics Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Analytics Dashboard</h3>
+                        <p>Real-time analytics platform using machine learning for predictive insights. Built with React, Node.js, and TensorFlow.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Pictures/project2.jpg" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Scalable e-commerce solution with microservices architecture. Features real-time inventory and AI-powered recommendations.</p>
+                        <div class="project-tags">
+                            <span>Microservices</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Pictures/project3.jpg" alt="FinTech App">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FinTech Mobile App</h3>
+                        <p>Cross-platform financial management app with blockchain integration. Supports real-time transactions and crypto payments.</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Blockchain</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Pictures/project4.jpg" alt="IoT Platform">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>IoT Management Platform</h3>
+                        <p>Enterprise IoT solution managing thousands of connected devices. Features real-time monitoring and predictive maintenance.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>MQTT</span>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Pictures/project5.jpg" alt="Social Platform">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Learning Platform</h3>
+                        <p>Educational social network with video streaming and interactive learning features. Supports millions of concurrent users.</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>WebRTC</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Pictures/project6.jpg" alt="Healthcare App">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Healthcare Management System</h3>
+                        <p>HIPAA-compliant healthcare platform with telemedicine features. Includes AI-powered diagnosis assistance.</p>
+                        <div class="project-tags">
+                            <span>Angular</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="blog-content">
+            <div class="section-header">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="blog-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="Pictures/blog1.jpg" alt="Modern Web Architecture">
+                                <div class="blog-date">Mar 15, 2024</div>
+                            </div>
+                            <div class="blog-info">
+                                <span class="blog-category">Architecture</span>
+                                <h3>Modern Web Architecture: Microservices vs Monolithic</h3>
+                                <p>An in-depth comparison of microservices and monolithic architectures, with real-world case studies...</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="Pictures/blog2.jpg" alt="AI in Web Development">
+                                <div class="blog-date">Mar 10, 2024</div>
+                            </div>
+                            <div class="blog-info">
+                                <span class="blog-category">AI & ML</span>
+                                <h3>Implementing AI in Modern Web Applications</h3>
+                                <p>Exploring practical applications of AI in web development, from chatbots to recommendation systems...</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="Pictures/blog3.jpg" alt="DevOps Practices">
+                                <div class="blog-date">Mar 5, 2024</div>
+                            </div>
+                            <div class="blog-info">
+                                <span class="blog-category">DevOps</span>
+                                <h3>Essential DevOps Practices for Modern Teams</h3>
+                                <p>Best practices for implementing DevOps in your organization, from CI/CD to monitoring...</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="Pictures/blog4.jpg" alt="Cloud Security">
+                                <div class="blog-date">Feb 28, 2024</div>
+                            </div>
+                            <div class="blog-info">
+                                <span class="blog-category">Security</span>
+                                <h3>Cloud Security: Best Practices and Common Pitfalls</h3>
+                                <p>A comprehensive guide to securing your cloud infrastructure and avoiding common security mistakes...</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="Pictures/blog5.jpg" alt="Frontend Performance">
+                                <div class="blog-date">Feb 20, 2024</div>
+                            </div>
+                            <div class="blog-info">
+                                <span class="blog-category">Performance</span>
+                                <h3>Optimizing Frontend Performance in 2024</h3>
+                                <p>Latest techniques and tools for optimizing web application performance and user experience...</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-button prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-button next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="#" class="footer-social-link">
+                    <span class="social-icon"><i class="fab fa-github"></i></span>
+                    <span class="social-name">GitHub</span>
+                </a>
+                <a href="#" class="footer-social-link">
+                    <span class="social-icon"><i class="fab fa-linkedin"></i></span>
+                    <span class="social-name">LinkedIn</span>
+                </a>
+                <a href="#" class="footer-social-link">
+                    <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                    <span class="social-name">Twitter</span>
+                </a>
+                <a href="#" class="footer-social-link">
+                    <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                    <span class="social-name">Instagram</span>
+                </a>
+                <a href="mailto:your.email@example.com" class="footer-social-link">
+                    <span class="social-icon"><i class="far fa-envelope"></i></span>
+                    <span class="social-name">Email</span>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Smithy Menjensen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

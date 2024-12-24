@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+    padding-bottom: 100px;
+}
+
+#play-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#instructions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#instructions p {
+    margin: 0;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #87CEEB;
+    position: relative;
+    cursor: none;
+}
+
+#crosshair {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: red;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1000;
+}
+
+#score {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.target {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    cursor: none;
+    transition: transform 0.1s;
+}
+
+.target:hover {
+    transform: scale(1.1);
+}
+
+.bomb {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 50%;
+    cursor: none;
+    transition: transform 0.1s;
+    border: 3px solid #ff0000;
+}
+
+.bomb:hover {
+    transform: scale(1.1);
+}
+
+#timer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+#game-over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2000;
+}
+
+#game-over h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#replay-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+} 
